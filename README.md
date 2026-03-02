@@ -144,16 +144,16 @@ The skills will be loaded on the next agent turn.
 
 **Step 1 — Install the skills**
 
-Clone this repository into your Claude skills directory:
+Clone this repository, then copy the skills into your Claude skills directory:
 
 ```bash
-git clone https://gitee.com/oschina/gitee-agent-skills ~/.claude/skills/gitee-agent-skills
-```
+# Global install (available in all projects)
+git clone https://gitee.com/oschina/gitee-agent-skills
 
-Or for a specific project only:
+cp -r /{path-to}/gitee-agent-skills/skills/* ~/.claude/skills/
 
-```bash
-git clone https://gitee.com/oschina/gitee-agent-skills .claude/skills/gitee-agent-skills
+# Or for a specific project only
+cp -r /{path-to}/gitee-agent-skills/skills/* .claude/skills/gitee-agent-skills
 ```
 
 **Step 2 — Configure the Gitee MCP Server**

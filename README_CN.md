@@ -148,10 +148,12 @@ Skills 将在下一次 Agent 会话时自动加载。
 
 ```bash
 # 全局安装（所有项目可用）
-git clone https://gitee.com/oschina/gitee-agent-skills ~/.claude/skills/gitee-agent-skills
+git clone https://gitee.com/oschina/gitee-agent-skills
+
+cp -r /{path-to}/gitee-agent-skills/skills/* ~/.claude/skills/
 
 # 或仅对当前项目生效
-git clone https://gitee.com/oschina/gitee-agent-skills .claude/skills/gitee-agent-skills
+cp -r /{path-to}/gitee-agent-skills/skills/* .claude/skills/gitee-agent-skills
 ```
 
 **第二步：配置 Gitee MCP Server**
