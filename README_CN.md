@@ -2,7 +2,7 @@
 
 基于 [Gitee MCP Server](https://gitee.com/oschina/mcp-gitee) 的 Agent Skills 合集，覆盖日常开发中最常用的 Gitee 工作流，包括 PR Review、Issue 实现、版本发布等。可在任何支持 Agent Skills 的应用中使用。
 
-[English](./README.md)
+[ 中文文档 | [English](./README.md) ]
 
 ## Skills 列表
 

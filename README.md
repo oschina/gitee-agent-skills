@@ -2,7 +2,7 @@
 
 A collection of Agent Skills for [Gitee](https://gitee.com), built on top of the [Gitee MCP Server](https://gitee.com/oschina/mcp-gitee). These skills cover common developer workflows — reviewing PRs, implementing issues, publishing releases, and more — and can be used in any application that supports Agent Skills.
 
-[中文文档](./README_CN.md)
+[ [中文文档](./README_CN.md) | English]
 
 ## Available Skills
 
