@@ -97,7 +97,14 @@ go install gitee.com/oschina/mcp-gitee@latest
 | **OpenAI Codex CLI** | `~/.codex/skills/` or `.codex/skills/` | [docs](https://developers.openai.com/codex/skills/) |
 | **Goose** | `~/.config/goose/skills/` or `.goose/skills/` | [docs](https://block.github.io/goose/docs/guides/context-engineering/using-skills/) |
 
-### OpenClaw
+### 使用 Skill CLI（推荐）
+skill cli 是 skill.sh 推出的用于管理 skills 的命令行工具，现在已适配常见支持 skill 的 Agent 应用（OpenClaw、Claude Code、OpenCode、Cursor 等），通过该 CLI，您可方便快捷一键安装 skills 至项目或全局
+
+```bash
+npx skills add oschina/gitee-agent-skills
+```
+
+### OpenClaw（手动安装）
 
 > **prereqs：** 推荐先在 OpenClaw 中安装 [mcporter skill](https://playbooks.com/skills/openclaw/skills/mcporter)。mcporter 是 OpenClaw 统一管理 MCP 服务的工具。
 
@@ -106,24 +113,12 @@ go install gitee.com/oschina/mcp-gitee@latest
 将本仓库克隆到 OpenClaw Skills 目录：
 
 ```bash
-git clone https://gitee.com/oschina/gitee-agent-skills ~/.openclaw/skills/gitee-agent-skills
+git clone https://gitee.com/oschina/gitee-agent-skills
+
+cp -r /{path-to}/gitee-agent-skills/skills/* ~/.openclaw/skills/
 ```
 
-**第二步：注册 Skills**
-
-在 `~/.openclaw/openclaw.json` 中添加以下配置：
-
-```json
-{
-  "skills": {
-    "gitee-agent-skills": {
-      "path": "~/.openclaw/skills/gitee-agent-skills/skills"
-    }
-  }
-}
-```
-
-**第三步：通过 mcporter 添加 Gitee MCP Server**
+**第二步：通过 mcporter 添加 Gitee MCP Server**
 
 OpenClaw 通过 [mcporter](https://github.com/steipete/mcporter) 统一管理 MCP 服务。执行以下命令注册 Gitee MCP Server：
 
@@ -145,7 +140,7 @@ mcporter config add gitee \
 mcporter list
 ```
 
-**第四步：重启 OpenClaw**
+**第三步：重启 OpenClaw**
 
 Skills 将在下一次 Agent 会话时自动加载。
 

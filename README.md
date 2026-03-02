@@ -97,33 +97,28 @@ go install gitee.com/oschina/mcp-gitee@latest
 | **OpenAI Codex CLI** | `~/.codex/skills/` or `.codex/skills/` | [docs](https://developers.openai.com/codex/skills/) |
 | **Goose** | `~/.config/goose/skills/` or `.goose/skills/` | [docs](https://block.github.io/goose/docs/guides/context-engineering/using-skills/) |
 
-### OpenClaw
+### Using Skill CLI (Recommended)
+The skill CLI is a command-line tool from [skill.sh](https://skill.sh) for managing skills. It supports popular Agent applications that use skills (OpenClaw, Claude Code, OpenCode, Cursor, etc.), allowing you to install skills globally or per-project with a single command:
+
+```bash
+npx skills add oschina/gitee-agent-skills
+```
+
+### OpenClaw (Manual Install)
 
 > **prereqs:** It is recommended to install the [mcporter skill](https://playbooks.com/skills/openclaw/skills/mcporter) in OpenClaw first. mcporter is the unified MCP server manager for OpenClaw.
 
 **Step 1 — Install the skills**
 
-Clone this repository into your OpenClaw skills directory:
+Clone this repository, then copy the skills into your OpenClaw skills directory:
 
 ```bash
-git clone https://gitee.com/oschina/gitee-agent-skills ~/.openclaw/skills/gitee-agent-skills
+git clone https://gitee.com/oschina/gitee-agent-skills
+
+cp -r /{path-to}/gitee-agent-skills/skills/* ~/.openclaw/skills/
 ```
 
-**Step 2 — Register the skills**
-
-Add the following to `~/.openclaw/openclaw.json`:
-
-```json
-{
-  "skills": {
-    "gitee-agent-skills": {
-      "path": "~/.openclaw/skills/gitee-agent-skills/skills"
-    }
-  }
-}
-```
-
-**Step 3 — Add the Gitee MCP Server via mcporter**
+**Step 2 — Add the Gitee MCP Server via mcporter**
 
 OpenClaw manages MCP servers through [mcporter](https://github.com/steipete/mcporter). Run the following command to register the Gitee MCP Server:
 
@@ -145,7 +140,7 @@ Verify the server is registered:
 mcporter list
 ```
 
-**Step 4 — Restart OpenClaw**
+**Step 3 — Restart OpenClaw**
 
 The skills will be loaded on the next agent turn.
 
