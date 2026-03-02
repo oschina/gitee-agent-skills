@@ -86,36 +86,6 @@ go install gitee.com/oschina/mcp-gitee@latest
 
 ## 安装方式
 
-### Claude Code
-
-**第一步：安装 Skills**
-
-将本仓库克隆到 Claude Skills 目录：
-
-```bash
-# 全局安装（所有项目可用）
-git clone https://gitee.com/oschina/gitee-agent-skills ~/.claude/skills/gitee-agent-skills
-
-# 或仅对当前项目生效
-git clone https://gitee.com/oschina/gitee-agent-skills .claude/skills/gitee-agent-skills
-```
-
-**第二步：配置 Gitee MCP Server**
-
-将上方的 MCP Server 配置添加到 `~/.claude/mcp.json`。
-
-**第三步：验证**
-
-启动 Claude Code 后运行：
-
-```
-/mcp
-```
-
-确认 `gitee` 出现在已连接的服务器列表中。Skills 会被自动发现并加载。
-
----
-
 ### OpenClaw
 
 > **prereqs：** 推荐先在 OpenClaw 中安装 [mcporter skill](https://playbooks.com/skills/openclaw/skills/mcporter)。mcporter 是 OpenClaw 统一管理 MCP 服务的工具。
@@ -168,6 +138,36 @@ mcporter list
 
 Skills 将在下一次 Agent 会话时自动加载。
 
+---
+
+### Claude Code
+
+**第一步：安装 Skills**
+
+将本仓库克隆到 Claude Skills 目录：
+
+```bash
+# 全局安装（所有项目可用）
+git clone https://gitee.com/oschina/gitee-agent-skills ~/.claude/skills/gitee-agent-skills
+
+# 或仅对当前项目生效
+git clone https://gitee.com/oschina/gitee-agent-skills .claude/skills/gitee-agent-skills
+```
+
+**第二步：配置 Gitee MCP Server**
+
+将上方的 MCP Server 配置添加到 `~/.claude/mcp.json`。
+
+**第三步：验证**
+
+启动 Claude Code 后运行：
+
+```
+/mcp
+```
+
+确认 `gitee` 出现在已连接的服务器列表中。Skills 会被自动发现并加载。
+
 ## 使用示例
 
 安装完成后，Skills 会根据你的请求自动激活，直接描述需求即可：
@@ -187,7 +187,3 @@ Skills 将在下一次 Agent 会话时自动加载。
 ```
 给 owner/repo 发布 v1.3.0 版本
 ```
-
-## 许可证
-
-MIT

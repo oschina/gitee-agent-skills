@@ -86,38 +86,6 @@ go install gitee.com/oschina/mcp-gitee@latest
 
 ## Installation
 
-### Claude Code
-
-**Step 1 — Install the skills**
-
-Clone this repository into your Claude skills directory:
-
-```bash
-git clone https://gitee.com/oschina/gitee-agent-skills ~/.claude/skills/gitee-agent-skills
-```
-
-Or for a specific project only:
-
-```bash
-git clone https://gitee.com/oschina/gitee-agent-skills .claude/skills/gitee-agent-skills
-```
-
-**Step 2 — Configure the Gitee MCP Server**
-
-Add the MCP server config to `~/.claude/mcp.json` using one of the options above.
-
-**Step 3 — Verify**
-
-Start Claude Code and run:
-
-```
-/mcp
-```
-
-Confirm `gitee` appears in the connected servers list. The skills will be automatically discovered and loaded.
-
----
-
 ### OpenClaw
 
 > **prereqs:** It is recommended to install the [mcporter skill](https://playbooks.com/skills/openclaw/skills/mcporter) in OpenClaw first. mcporter is the unified MCP server manager for OpenClaw.
@@ -170,6 +138,38 @@ mcporter list
 
 The skills will be loaded on the next agent turn.
 
+---
+
+### Claude Code
+
+**Step 1 — Install the skills**
+
+Clone this repository into your Claude skills directory:
+
+```bash
+git clone https://gitee.com/oschina/gitee-agent-skills ~/.claude/skills/gitee-agent-skills
+```
+
+Or for a specific project only:
+
+```bash
+git clone https://gitee.com/oschina/gitee-agent-skills .claude/skills/gitee-agent-skills
+```
+
+**Step 2 — Configure the Gitee MCP Server**
+
+Add the MCP server config to `~/.claude/mcp.json` using one of the options above.
+
+**Step 3 — Verify**
+
+Start Claude Code and run:
+
+```
+/mcp
+```
+
+Confirm `gitee` appears in the connected servers list. The skills will be automatically discovered and loaded.
+
 ## Usage
 
 Once installed, the skills activate automatically based on your request. Just describe what you want to do:
@@ -189,7 +189,3 @@ Implement issue #15 in owner/repo
 ```
 Publish release v1.3.0 for owner/repo
 ```
-
-## License
-
-MIT
