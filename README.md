@@ -29,7 +29,7 @@ Get yours at: **https://gitee.com/profile/personal_access_tokens**
 
 Required scopes: `projects`, `issues`, `pull_requests`, `notifications`
 
-### 2. Gitee MCP Server
+### 2. Configure Gitee MCP Server
 
 Choose one of the following setup methods:
 
@@ -85,6 +85,17 @@ go install gitee.com/oschina/mcp-gitee@latest
 ```
 
 ## Installation
+> Common client skills directory locations
+
+| Client | Skills directory | Docs |
+|--------|-----------------|------|
+| **OpenClaw** | `~/.openclaw/skills/` or `<workspace>/skills/` | [docs](https://docs.openclaw.ai/tools/skills) |
+| **Claude Code** | `~/.claude/skills/` or `.claude/skills/` | [docs](https://docs.anthropic.com/en/docs/claude-code/skills) |
+| **Gemini CLI** | `~/.gemini/skills/` or `.gemini/skills/` | [docs](https://geminicli.com/docs/cli/skills/) |
+| **Google Antigravity** | `~/.gemini/antigravity/skills/` or `.agent/skills/` | [docs](https://antigravity.google/docs/skills) |
+| **Cursor** | `~/.cursor/skills/` or `.cursor/skills/` | [docs](https://cursor.com/docs/context/skills) |
+| **OpenAI Codex CLI** | `~/.codex/skills/` or `.codex/skills/` | [docs](https://developers.openai.com/codex/skills/) |
+| **Goose** | `~/.config/goose/skills/` or `.goose/skills/` | [docs](https://block.github.io/goose/docs/guides/context-engineering/using-skills/) |
 
 ### OpenClaw
 

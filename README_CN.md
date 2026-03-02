@@ -85,6 +85,17 @@ go install gitee.com/oschina/mcp-gitee@latest
 ```
 
 ## 安装方式
+> 常见 Client skills 所在目录
+
+| 客户端 | Skills 目录 | 文档 |
+|--------|-----------------|---------------|
+|**OpenClaw**| `~/.openclaw/skills/` or `<workspace>/skills/`| [docs](https://docs.openclaw.ai/tools/skills)|
+| **Claude Code** | `~/.claude/skills/` or `.claude/skills/` | [docs](https://docs.anthropic.com/en/docs/claude-code/skills) |
+| **Gemini CLI** | `~/.gemini/skills/` or `.gemini/skills/` | [docs](https://geminicli.com/docs/cli/skills/) |
+| **Google Antigravity** | `~/.gemini/antigravity/skills/` or `.agent/skills/` | [docs](https://antigravity.google/docs/skills) |
+| **Cursor** | `~/.cursor/skills/` or `.cursor/skills/` | [docs](https://cursor.com/docs/context/skills) |
+| **OpenAI Codex CLI** | `~/.codex/skills/` or `.codex/skills/` | [docs](https://developers.openai.com/codex/skills/) |
+| **Goose** | `~/.config/goose/skills/` or `.goose/skills/` | [docs](https://block.github.io/goose/docs/guides/context-engineering/using-skills/) |
 
 ### OpenClaw
 
