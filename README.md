@@ -23,9 +23,7 @@ A collection of Agent Skills for [Gitee](https://gitee.com), built on top of the
 
 ### 1. Gitee Account & Access Token
 
-All skills communicate with Gitee via the Gitee MCP Server and require a personal access token.
-
-Get yours at: **https://gitee.com/profile/personal_access_tokens**
+All skills communicate with Gitee via the Gitee MCP Server and require a personal access token, [Go to get](https://gitee.com/profile/personal_access_tokens).
 
 Required scopes: `projects`, `issues`, `pull_requests`, `notifications`
 

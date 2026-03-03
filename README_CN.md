@@ -23,9 +23,7 @@
 
 ### 1. Gitee 账号与访问令牌
 
-所有 Skills 通过 Gitee MCP Server 与 Gitee API 通信，需要个人访问令牌。
-
-前往此处获取：**https://gitee.com/profile/personal_access_tokens**
+所有 Skills 通过 Gitee MCP Server 与 Gitee API 通信，需要个人访问令牌，[前往获取](https://gitee.com/profile/personal_access_tokens)。
 
 所需权限范围：`projects`、`issues`、`pull_requests`、`notifications`
 
