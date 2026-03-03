@@ -97,7 +97,7 @@ go install gitee.com/oschina/mcp-gitee@latest
 | **OpenAI Codex CLI** | `~/.codex/skills/` or `.codex/skills/` | [docs](https://developers.openai.com/codex/skills/) |
 | **Goose** | `~/.config/goose/skills/` or `.goose/skills/` | [docs](https://block.github.io/goose/docs/guides/context-engineering/using-skills/) |
 
-### 使用 Skill CLI（推荐）
+### 使用 Skill CLI 安装
 skill cli 是 skill.sh 推出的用于管理 skills 的命令行工具，现在已适配常见支持 skill 的 Agent 应用（OpenClaw、Claude Code、OpenCode、Cursor 等），通过该 CLI，您可方便快捷一键安装 skills 至项目或全局
 
 ```bash
@@ -115,7 +115,7 @@ npx skills add oschina/gitee-agent-skills
 ```bash
 git clone https://gitee.com/oschina/gitee-agent-skills
 
-cp -r /{path-to}/gitee-agent-skills/skills/* ~/.openclaw/skills/
+cp -r ./gitee-agent-skills/skills/* ~/.openclaw/skills/
 ```
 
 **第二步：通过 mcporter 添加 Gitee MCP Server**
@@ -156,10 +156,10 @@ Skills 将在下一次 Agent 会话时自动加载。
 # 全局安装（所有项目可用）
 git clone https://gitee.com/oschina/gitee-agent-skills
 
-cp -r /{path-to}/gitee-agent-skills/skills/* ~/.claude/skills/
+cp -r ./gitee-agent-skills/skills/* ~/.claude/skills/
 
 # 或仅对当前项目生效
-cp -r /{path-to}/gitee-agent-skills/skills/* .claude/skills/gitee-agent-skills
+cp -r ./gitee-agent-skills/skills/* .claude/skills/gitee-agent-skills
 ```
 
 **第二步：配置 Gitee MCP Server**

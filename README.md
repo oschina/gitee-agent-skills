@@ -97,7 +97,7 @@ go install gitee.com/oschina/mcp-gitee@latest
 | **OpenAI Codex CLI** | `~/.codex/skills/` or `.codex/skills/` | [docs](https://developers.openai.com/codex/skills/) |
 | **Goose** | `~/.config/goose/skills/` or `.goose/skills/` | [docs](https://block.github.io/goose/docs/guides/context-engineering/using-skills/) |
 
-### Using Skill CLI (Recommended)
+### Using Skill CLI Install
 The skill CLI is a command-line tool from [skill.sh](https://skill.sh) for managing skills. It supports popular Agent applications that use skills (OpenClaw, Claude Code, OpenCode, Cursor, etc.), allowing you to install skills globally or per-project with a single command:
 
 ```bash
@@ -115,7 +115,7 @@ Clone this repository, then copy the skills into your OpenClaw skills directory:
 ```bash
 git clone https://gitee.com/oschina/gitee-agent-skills
 
-cp -r /{path-to}/gitee-agent-skills/skills/* ~/.openclaw/skills/
+cp -r ./gitee-agent-skills/skills/* ~/.openclaw/skills/
 ```
 
 **Step 2 — Add the Gitee MCP Server via mcporter**
@@ -156,10 +156,10 @@ Clone this repository, then copy the skills into your Claude skills directory:
 # Global install (available in all projects)
 git clone https://gitee.com/oschina/gitee-agent-skills
 
-cp -r /{path-to}/gitee-agent-skills/skills/* ~/.claude/skills/
+cp -r ./gitee-agent-skills/skills/* ~/.claude/skills/
 
 # Or for a specific project only
-cp -r /{path-to}/gitee-agent-skills/skills/* .claude/skills/gitee-agent-skills
+cp -r ./gitee-agent-skills/skills/* .claude/skills/gitee-agent-skills
 ```
 
 **Step 2 — Configure the Gitee MCP Server**
