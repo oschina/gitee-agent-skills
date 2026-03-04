@@ -13,7 +13,7 @@ Generate a well-structured Pull Request description based on the current changes
 
 ## Prerequisites
 
-- Gitee MCP Server configured (tools: `create_pull`, `get_file_content`, `list_repo_issues`)
+- Gitee MCP Server configured (tools: `create_pull`, `get_file_content`, `list_repo_issues`, `compare_branches_tags`)
 - User must provide: repository owner, repository name, source branch, target branch (usually main/master)
 - Optional: linked Issue number
 
@@ -29,7 +29,11 @@ Confirm with the user or infer from context:
 
 ### Step 2: Analyze the Changes
 
-If diff information is available, analyze:
+Use `compare_branches_tags` to fetch the diff between the source branch and target branch:
+- `base`: target branch (e.g., `main` or `master`)
+- `head`: source branch
+
+Analyze the returned diff to determine:
 - Which core files were changed
 - What functionality was added or modified
 - Whether there are any breaking changes
