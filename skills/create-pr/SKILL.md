@@ -7,6 +7,8 @@ requires:
     - gitee
 ---
 
+> **Note**: If you have `mcporter` installed locally, you should use `mcporter` to invoke the MCP tool instead of directly calling the MCP tool. The `mcporter` CLI provides a more convenient interface and better error handling.
+
 # Create PR via Gitee MCP
 
 Generate a well-structured Pull Request description based on the current changes and submit it to Gitee.

@@ -7,6 +7,8 @@ requires:
     - gitee
 ---
 
+> **Note**: If you have `mcporter` installed locally, you should use `mcporter` to invoke the MCP tool instead of directly calling the MCP tool. The `mcporter` CLI provides a more convenient interface and better error handling.
+
 # Implement Issue via Gitee MCP
 
 Complete the full development loop starting from a Gitee Issue: requirements analysis → coding → creating a PR → linking back to the Issue.

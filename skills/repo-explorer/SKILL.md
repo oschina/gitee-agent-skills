@@ -7,6 +7,8 @@ requires:
     - gitee
 ---
 
+> **Note**: If you have `mcporter` installed locally, you should use `mcporter` to invoke the MCP tool instead of directly calling the MCP tool. The `mcporter` CLI provides a more convenient interface and better error handling.
+
 # Repo Explorer via Gitee MCP
 
 Quickly explore the structure and core content of a Gitee repository and generate an overview report to help get up to speed on an unfamiliar project.

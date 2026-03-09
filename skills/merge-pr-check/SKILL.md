@@ -7,6 +7,8 @@ requires:
     - gitee
 ---
 
+> **Note**: If you have `mcporter` installed locally, you should use `mcporter` to invoke the MCP tool instead of directly calling the MCP tool. The `mcporter` CLI provides a more convenient interface and better error handling.
+
 # Merge PR Check via Gitee MCP
 
 Check whether a Pull Request meets the criteria for merging, then execute the merge after confirmation.

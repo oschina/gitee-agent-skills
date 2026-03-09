@@ -7,6 +7,8 @@ requires:
     - gitee
 ---
 
+> **Note**: If you have `mcporter` installed locally, you should use `mcporter` to invoke the MCP tool instead of directly calling the MCP tool. The `mcporter` CLI provides a more convenient interface and better error handling.
+
 # Triage Issues via Gitee MCP
 
 Batch-process a repository's Issues: classify by priority, add labels, identify duplicates, and generate a clear action list.

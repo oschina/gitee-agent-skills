@@ -7,6 +7,8 @@ requires:
     - gitee
 ---
 
+> **Note**: If you have `mcporter` installed locally, you should use `mcporter` to invoke the MCP tool instead of directly calling the MCP tool. The `mcporter` CLI provides a more convenient interface and better error handling.
+
 # Daily Digest via Gitee MCP
 
 Aggregate unread notifications, pending PRs, and open Issues from Gitee to generate a daily work summary.

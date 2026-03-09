@@ -7,6 +7,8 @@ requires:
     - gitee
 ---
 
+> **Note**: If you have `mcporter` installed locally, you should use `mcporter` to invoke the MCP tool instead of directly calling the MCP tool. The `mcporter` CLI provides a more convenient interface and better error handling.
+
 # Close Issue Flow via Gitee MCP
 
 Execute the complete Issue closing workflow: verify the fix is merged → post a closing comment → update the Issue status.
