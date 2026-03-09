@@ -113,6 +113,8 @@ Clone this repository, then copy the skills into your OpenClaw skills directory:
 ```bash
 git clone https://gitee.com/oschina/gitee-agent-skills
 
+mkdir -p ~/.openclaw/skills
+
 cp -r ./gitee-agent-skills/skills/* ~/.openclaw/skills/
 ```
 
@@ -140,6 +142,10 @@ mcporter list
 
 **Step 3 — Restart OpenClaw**
 
+```bash
+openclaw gateway restart
+```
+
 The skills will be loaded on the next agent turn.
 
 ---
@@ -154,9 +160,11 @@ Clone this repository, then copy the skills into your Claude skills directory:
 # Global install (available in all projects)
 git clone https://gitee.com/oschina/gitee-agent-skills
 
+mkdir -p ~/.claude/skills
 cp -r ./gitee-agent-skills/skills/* ~/.claude/skills/
 
 # Or for a specific project only
+mkdir -p .claude/skills
 cp -r ./gitee-agent-skills/skills/* .claude/skills/gitee-agent-skills
 ```
 

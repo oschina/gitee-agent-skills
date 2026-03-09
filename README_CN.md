@@ -113,6 +113,8 @@ npx skills add oschina/gitee-agent-skills
 ```bash
 git clone https://gitee.com/oschina/gitee-agent-skills
 
+mkdir -p ~/.openclaw/skills
+
 cp -r ./gitee-agent-skills/skills/* ~/.openclaw/skills/
 ```
 
@@ -140,6 +142,10 @@ mcporter list
 
 **第三步：重启 OpenClaw**
 
+```bash
+openclaw gateway restart
+```
+
 Skills 将在下一次 Agent 会话时自动加载。
 
 ---
@@ -154,9 +160,11 @@ Skills 将在下一次 Agent 会话时自动加载。
 # 全局安装（所有项目可用）
 git clone https://gitee.com/oschina/gitee-agent-skills
 
+mkdir -p ~/.claude/skills
 cp -r ./gitee-agent-skills/skills/* ~/.claude/skills/
 
 # 或仅对当前项目生效
+mkdir -p .claude/skills
 cp -r ./gitee-agent-skills/skills/* .claude/skills/gitee-agent-skills
 ```
 
