@@ -15,6 +15,7 @@ Perform a thorough code review on a Pull Request in a Gitee repository.
 
 - Gitee MCP Server configured (tools: `get_pull_detail`, `get_diff_files`, `list_pull_comments`, `comment_pull`)
 - User must provide: repository owner, repository name, PR number (or say "review the latest PR")
+- **Optional**: If the current directory is the local clone of the PR's repository, you can leverage local git commands and file access to get more context.
 
 ## Steps
 
@@ -33,6 +34,8 @@ Use `get_diff_files` to get the list of changed files, analyzing:
 - Whether any sensitive files are involved (config files, secrets, permission-related code)
 
 For each core changed file, use `get_file_content` to read its content for context.
+
+**If running in the local repository directory**, leverage local git commands and file access to gain additional context for the review (e.g., viewing related commits, related files, file history).
 
 ### Step 3: Check Existing Comments
 

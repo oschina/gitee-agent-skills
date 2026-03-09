@@ -55,7 +55,22 @@ Classify each PR:
 - `chore`: dependency / build / toolchain changes
 - `breaking`: breaking change (title contains `breaking` or `!:`)
 
-### Step 4: Generate Changelog
+### Step 4: Analyze Code Changes
+
+As a supplement to PR titles, use `compare_branches_tags` to get a more detailed diff analysis:
+
+```
+compare_branches_tags(owner="[owner]", repo="[repo]", target="[current_branch]", base="[previous_version_tag]")
+```
+
+This returns:
+- Files changed (added, modified, deleted)
+- Commit history between versions
+- Code statistics (additions, deletions)
+
+Use this to understand the actual code changes behind each PR, especially useful when PR titles are unclear.
+
+### Step 5: Generate Changelog
 
 Generate the changelog using this template:
 
@@ -88,7 +103,7 @@ Generate the changelog using this template:
 
 Omit sections with no changes.
 
-### Step 5: Confirm and Create the Release
+### Step 6: Confirm and Create the Release
 
 Show the generated changelog to the user for confirmation. After confirmation, use `create_release` with these parameters:
 - `tag_name`: version number (e.g., `v1.2.0`)

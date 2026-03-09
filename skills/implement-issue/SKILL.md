@@ -15,7 +15,7 @@ Complete the full development loop starting from a Gitee Issue: requirements ana
 
 - Gitee MCP Server configured (tools: `get_repo_issue_detail`, `list_repo_issues`, `create_pull`, `comment_issue`, `update_issue`)
 - User must provide: repository owner, repository name, Issue number (or select from a list)
-- The actual coding is done locally by the user (Claude assists with analysis and implementation guidance)
+- **Local repository path**: This skill must be executed in the local checkout of the issue's repository, OR the user must provide the local path to the repository clone. This is required for the Coding Agent to read and modify source files.
 
 ## Steps
 

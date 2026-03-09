@@ -30,7 +30,15 @@ Start by reading these files using `get_file_content`:
 
 ### Step 2: Explore Project Structure
 
-Use `get_file_content` to browse the root directory and key subdirectories, identifying:
+First, use `get_file_content` with `path="/"` to get the root directory tree:
+
+```
+get_file_content(owner="[owner]", repo="[repo]", path="/")
+```
+
+This returns the top-level directory structure in a single call, providing a quick overview of the project's layout.
+
+Then, browse key subdirectories to identify:
 
 **Common project structure patterns**
 - `src/` or `lib/`: core source code
