@@ -11,6 +11,7 @@
 | `review-pr` | 获取 PR 差异、分析代码质量，并自动发布结构化 Review 评论 |
 | `create-pr` | 自动生成规范的 PR 标题与描述，并提交拉取请求 |
 | `merge-pr-check` | 检查 PR 是否具备合并条件，确认后执行合并 |
+| `create-issue` | 与用户确认需求后，创建结构规范的 Issue |
 | `implement-issue` | Issue → 需求分析 → 辅助编码 → 创建 PR → 关闭 Issue 完整闭环 |
 | `triage-issues` | 批量整理开放 Issue，按优先级、类型、状态分类 |
 | `close-issue-flow` | 确认修复已合并后，规范关闭 Issue 并发布说明评论 |

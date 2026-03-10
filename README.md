@@ -11,6 +11,7 @@ A collection of Agent Skills for [Gitee](https://gitee.com), built on top of the
 | `review-pr` | Review a PR: fetch diff, analyze code quality, and post a structured comment |
 | `create-pr` | Create a well-structured PR with a generated title and description |
 | `merge-pr-check` | Check if a PR is ready to merge, then execute the merge after confirmation |
+| `create-issue` | Create a well-structured issue after clarifying requirements with the user |
 | `implement-issue` | Full loop from Issue → requirements analysis → coding → PR → close |
 | `triage-issues` | Batch-classify open issues by priority, type, and status |
 | `close-issue-flow` | Close an issue with a proper comment after verifying the fix is merged |
