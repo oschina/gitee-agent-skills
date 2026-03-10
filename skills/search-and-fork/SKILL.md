@@ -1,7 +1,7 @@
 ---
 name: search-and-fork
 description: Use this skill when the user asks to search for and fork an open source repository, "find me an open source project", "search and fork", "search-and-fork", "find a similar project on Gitee", or "fork a repository". Requires Gitee MCP Server to be configured.
-version: 1.0.0
+version: 1.0.1
 requires:
   mcp-servers:
     - gitee
@@ -15,7 +15,7 @@ Search for open source repositories on Gitee that match the user's needs, compar
 
 ## Prerequisites
 
-- Gitee MCP Server configured (tools: `search_open_source_repositories`, `fork_repository`, `get_user_info`)
+- Gitee MCP Server configured (tools: `search_open_source_repositories`, `fork_repository`, `get_user_info`, `get_file_content`)
 - User must provide: search keywords or a description of what they need
 
 ## Steps
@@ -82,7 +82,30 @@ Top candidates ranked by overall score:
 **Suggested pick**: Recommendation #1, because [reason]
 ```
 
-### Step 5: Fork the Selected Repository
+### Step 5: Explore the Selected Repository (Optional)
+
+After the user makes a selection but before forking, you can use `get_file_content` to fetch more details to help the user confirm their choice:
+
+**Step 5.1: Get directory tree**
+```
+get_file_content(owner="[owner]", repo="[repo]", path="/")
+```
+
+**Step 5.2: Get README content (if available)**
+
+From the directory tree, check if there's a README file (e.g., `README.md`, `README_CN.md`, `README.en.md`). Then fetch it:
+
+```
+get_file_content(owner="[owner]", repo="[repo]", path="README.md")
+```
+
+Present the key findings to help the user make an informed decision:
+- Project structure overview
+- Main functionality from README
+- Tech stack and dependencies
+- Whether it's actively maintained
+
+### Step 6: Fork the Selected Repository
 
 After the user makes a selection, use `fork_repository` to fork it:
 - `owner`: owner of the repository to fork

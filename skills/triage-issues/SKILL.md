@@ -1,7 +1,7 @@
 ---
 name: triage-issues
 description: Use this skill when the user asks to triage issues, organize the issue list, "triage issues", "show me all open issues", "categorize issues", "triage-issues". Requires Gitee MCP Server to be configured.
-version: 1.0.0
+version: 1.0.1
 requires:
   mcp-servers:
     - gitee
@@ -31,13 +31,27 @@ Use `list_repo_issues` to retrieve open Issues:
 
 For each Issue, quickly evaluate:
 
-**Type classification**
-- `bug`: something is broken, throwing errors, or crashing
-- `feature`: request for new functionality
-- `enhancement`: improvement to existing functionality
-- `question`: usage question
-- `docs`: documentation-related
-- `duplicate`: same as an existing Issue
+**Type classification (use labels)**
+| Type | Label | Description |
+|------|-------|-------------|
+| Bug | `bug` | something is broken, throwing errors, or crashing |
+| Feature | `feature` | request for new functionality |
+| Enhancement | `enhancement` | improvement to existing functionality |
+| Question | `question` | usage question |
+| Documentation | `docs` | documentation-related |
+| Duplicate | `duplicate` | same as an existing Issue |
+
+**Common additional labels**
+| Label | Use Case |
+|-------|----------|
+| `help wanted` | Needs external contribution |
+| `wontfix` | Will not be addressed |
+| `invalid` | Invalid or spam |
+| `security` | Security-related |
+| `performance` | Performance-related |
+| `ui/ux` | User interface improvements |
+| `backend` | Backend-related |
+| `frontend` | Frontend-related |
 
 **Priority assessment**
 - `P0 - Critical`: affects core functionality, production bug, security vulnerability
@@ -63,21 +77,21 @@ Total open issues: [N]
 ---
 
 ### 🔴 P0 Critical (needs immediate attention)
-| # | Title | Type | Note |
-|---|-------|------|------|
-| #N | [title] | bug | [one sentence explaining urgency] |
+| # | Title | Type | Labels | Note |
+|---|-------|------|--------|------|
+| #N | [title] | bug | bug, security | [one sentence explaining urgency] |
 
 ### 🟠 P1 High Priority
-| # | Title | Type | Note |
-|---|-------|------|------|
+| # | Title | Type | Labels | Note |
+|---|-------|------|--------|------|
 
 ### 🟡 P2 Medium Priority
-| # | Title | Type | Note |
-|---|-------|------|------|
+| # | Title | Type | Labels | Note |
+|---|-------|------|--------|------|
 
 ### 🟢 P3 Low Priority
-| # | Title | Type | Note |
-|---|-------|------|------|
+| # | Title | Type | Labels | Note |
+|---|-------|------|--------|------|
 
 ---
 
@@ -95,10 +109,17 @@ Total open issues: [N]
 
 Ask the user whether to automatically update labels and priorities.
 
-After confirmation, use `update_issue` for Issues that need updating:
-- Add appropriate labels
-- Update priority
-- Assign to a team member (if specified by the user)
+After confirmation, use `update_issue` to:
+- Add type labels (`bug`, `feature`, `enhancement`, `question`, `docs`, `duplicate`)
+- Add additional labels based on context (`help wanted`, `security`, etc.)
+- Add priority indicator (if supported by the repository)
+
+**Label assignment examples:**
+- A bug report → add `bug` label
+- A feature request with good description → add `feature` label
+- An enhancement suggestion → add `enhancement` label
+- A simple question → add `question` label
+- Needs external help → add `help wanted`
 
 For Issues that need more information, use `comment_issue` to ask:
 
@@ -118,3 +139,5 @@ Thank you!
 - Triage focuses on classification and organization — no need to deep-dive into technical details of each Issue
 - Always confirm with the user before performing bulk updates to avoid unintended changes
 - If there are more than 50 Issues, consider processing in batches or filtering by a specific label
+- Use consistent labels to help contributors find Issues matching their interests
+- Check existing labels in the repository first — some projects may have custom label names
