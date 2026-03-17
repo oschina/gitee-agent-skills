@@ -18,6 +18,7 @@
 | `daily-digest` | 汇总未读通知、待处理 PR 和 Issue，生成每日工作摘要 |
 | `create-release` | 从合并的 PR 历史生成 Changelog 并发布版本 |
 | `repo-explorer` | 快速了解任意 Gitee 仓库的结构与核心内容 |
+| `search-repos` | 搜索开源仓库，支持按语言、热度、活跃度筛选 |
 | `search-and-fork` | 在 Gitee 上搜索开源项目并 Fork 最合适的仓库 |
 | `quick-fix-suggestion` | 分析 Issue 内容，定位相关代码，建议需要修改的文件和实现计划 |
 | `stale-pr-reminder` | 扫描仓库中长时间无活动的 PR，生成优先级提醒报告 |
