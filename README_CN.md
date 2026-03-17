@@ -19,6 +19,8 @@
 | `create-release` | 从合并的 PR 历史生成 Changelog 并发布版本 |
 | `repo-explorer` | 快速了解任意 Gitee 仓库的结构与核心内容 |
 | `search-and-fork` | 在 Gitee 上搜索开源项目并 Fork 最合适的仓库 |
+| `quick-fix-suggestion` | 分析 Issue 内容，定位相关代码，建议需要修改的文件和实现计划 |
+| `stale-pr-reminder` | 扫描仓库中长时间无活动的 PR，生成优先级提醒报告 |
 
 ## 前置要求
 

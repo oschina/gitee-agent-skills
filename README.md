@@ -19,6 +19,8 @@ A collection of Agent Skills for [Gitee](https://gitee.com), built on top of the
 | `create-release` | Generate a changelog from merged PRs and publish a release |
 | `repo-explorer` | Generate a structured overview of any Gitee repository |
 | `search-and-fork` | Search for open source projects on Gitee and fork the best match |
+| `quick-fix-suggestion` | Analyze an issue, locate relevant code, and suggest files to modify with implementation plan |
+| `stale-pr-reminder` | Scan repositories for stale PRs and generate a prioritized action report |
 
 ## Prerequisites
 
