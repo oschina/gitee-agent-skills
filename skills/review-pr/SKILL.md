@@ -77,9 +77,46 @@ Classify findings by severity:
 - 🟡 **Suggestion**: Code quality issue — recommended but not mandatory
 - 🟢 **Optional**: Nice-to-have improvement
 
-### Step 6: Post Review Comment
+### Step 6: Present Review to User
 
-Use `comment_pull` to post the review to the PR. Use this format:
+**STOP — Do not post yet!**
+
+Present the review content to the user for confirmation. Use this format:
+
+```
+## Code Review Preview
+
+**Summary**: [One sentence describing the purpose of the PR and overall quality assessment]
+
+### 🔴 Blockers
+1. **[filename:line]** [Issue description]
+   - Problem: [Specific explanation]
+   - Suggestion: [How to fix it]
+
+### 🟡 Suggestions
+1. **[filename]** [Issue description]
+   - Suggestion: [Direction for improvement]
+
+### 🟢 Optional
+1. [Improvement suggestion]
+
+### Conclusion
+[Overall assessment — LGTM or key changes needed]
+```
+
+If no issues are found, show:
+
+```
+## Code Review Preview
+
+LGTM! No significant issues found. Code quality looks good.
+```
+
+Then ask the user: **"请确认以上评审内容是否有问题。确认无误后，我将提交到 PR。"**
+
+### Step 7: Post Review Comment (After User Confirmation)
+
+Once the user confirms the review content is correct, use `comment_pull` to post the review to the PR. Use this format:
 
 ```
 ## Code Review
