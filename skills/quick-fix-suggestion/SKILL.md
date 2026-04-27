@@ -26,7 +26,7 @@ Analyze a Gitee Issue and generate intelligent fix suggestions including:
 
 ## Prerequisites
 
-- Gitee MCP Server configured (tools: `get_repo_issue_detail`, `list_issue_comments`, `search_files_by_content`, `get_file_content`)
+- Gitee MCP Server configured (tools: `get_repo_issue_detail`, `list_comments` (resource_type: issue), `search_files_by_content`, `get_file_content`)
 - Must be executed in a local clone of the repository
 - User must provide: repository owner, repository name, Issue number
 

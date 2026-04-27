@@ -15,7 +15,7 @@ Execute the complete Issue closing workflow: verify the fix is merged → post a
 
 ## Prerequisites
 
-- Gitee MCP Server configured (tools: `get_repo_issue_detail`, `list_repo_pulls`, `comment_issue`, `update_issue`)
+- Gitee MCP Server configured (tools: `get_repo_issue_detail`, `list_repo_pulls`, `create_comment` (resource_type: issue), `update_issue`)
 - User must provide: repository owner, repository name, Issue number
 - Typically run after the related PR has been merged or the problem has been resolved
 
@@ -43,7 +43,7 @@ Based on the results:
 
 ### Step 3: Post Closing Comment
 
-Use `comment_issue` to post a closing note. Choose the appropriate template:
+Use `create_comment` (resource_type: issue) to post a closing note. Choose the appropriate template:
 
 **When a linked PR was merged:**
 ```

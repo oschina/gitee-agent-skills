@@ -15,7 +15,7 @@ Check whether a Pull Request meets the criteria for merging, then execute the me
 
 ## Prerequisites
 
-- Gitee MCP Server configured (tools: `get_pull_detail`, `list_pull_comments`, `get_diff_files`, `merge_pull`)
+- Gitee MCP Server configured (tools: `get_pull_detail`, `list_comments` (resource_type: pull), `get_diff_files`, `merge_pull`)
 - User must provide: repository owner, repository name, PR number
 
 ## Steps
@@ -35,7 +35,7 @@ Use `get_pull_detail` to retrieve PR details and check:
 
 ### Step 2: Analyze Comments and Review Feedback
 
-Use `list_pull_comments` to retrieve all comments and check:
+Use `list_comments` (resource_type: pull) to retrieve all comments and check:
 - Whether any reviewer has explicitly objected to merging (e.g., "NACK", "needs changes", "do not merge")
 - Whether there are unresolved discussions (questions raised but not replied to)
 - Whether there are any LGTM or Approved responses

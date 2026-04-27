@@ -15,7 +15,7 @@ Batch-process a repository's Issues: classify by priority, add labels, identify 
 
 ## Prerequisites
 
-- Gitee MCP Server configured (tools: `list_repo_issues`, `get_repo_issue_detail`, `update_issue`, `comment_issue`)
+- Gitee MCP Server configured (tools: `list_repo_issues`, `get_repo_issue_detail`, `update_issue`, `create_comment` (resource_type: issue))
 - User must provide: repository owner, repository name
 - Optional: filter criteria (bugs only / unassigned only / specific milestone, etc.)
 
@@ -121,7 +121,7 @@ After confirmation, use `update_issue` to:
 - A simple question → add `question` label
 - Needs external help → add `help wanted`
 
-For Issues that need more information, use `comment_issue` to ask:
+For Issues that need more information, use `create_comment` (resource_type: issue) to ask:
 
 ```
 Thanks for submitting this issue!

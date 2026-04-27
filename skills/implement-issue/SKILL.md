@@ -15,7 +15,7 @@ Complete the full development loop starting from a Gitee Issue: requirements ana
 
 ## Prerequisites
 
-- Gitee MCP Server configured (tools: `get_repo_issue_detail`, `list_repo_issues`, `create_pull`, `comment_issue`, `update_issue`)
+- Gitee MCP Server configured (tools: `get_repo_issue_detail`, `list_repo_issues`, `create_pull`, `create_comment` (resource_type: issue), `update_issue`)
 - User must provide: repository owner, repository name, Issue number (or select from a list)
 - **Local repository path**: This skill must be executed in the local checkout of the issue's repository, OR the user must provide the local path to the repository clone. This is required for the Coding Agent to read and modify source files.
 
@@ -29,7 +29,7 @@ Use `get_repo_issue_detail` to retrieve full Issue information:
 - Priority and milestone
 - Existing comments (to understand discussion context)
 
-Also use `list_issue_comments` to review comments and check:
+Also use `list_comments` (resource_type: issue) to review comments and check:
 - Existing technical design discussions
 - Relevant background context
 - Whether someone else is already working on it
@@ -74,7 +74,7 @@ If the user has already finished coding, proceed to the next step.
 
 ### Step 4: Record Progress in the Issue
 
-Use `comment_issue` to post a progress update on the Issue:
+Use `create_comment` (resource_type: issue) to post a progress update on the Issue:
 
 ```
 Starting work on this issue. Expected changes:
@@ -97,7 +97,7 @@ Use `create_pull` to create a PR. The PR description should include:
 ### Step 6: Update the Issue
 
 After the PR is created:
-1. Use `comment_issue` to post the PR link on the Issue
+1. Use `create_comment` (resource_type: issue) to post the PR link on the Issue
 2. If the Issue status needs updating, use `update_issue` to change it
 
 Comment template:

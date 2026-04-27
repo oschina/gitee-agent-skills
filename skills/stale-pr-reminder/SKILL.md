@@ -65,7 +65,7 @@ EXTRACT:
 
 ### Step 3: Get Comments (Optional)
 
-Call `list_pull_comments` to check review activity:
+Call `list_comments` (resource_type: pull) to check review activity:
 
 ```
 ANALYZE:
